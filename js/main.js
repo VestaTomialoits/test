@@ -34,7 +34,7 @@ let req = (url) => fetch('https://cors-anywhere.herokuapp.com/' + url)
                 });
             } else {
                 dataArray.filter(item => {
-                    if (item.toLowerCase().includes(input.value)) {
+                    if (item.toLowerCase().includes(input.value) || item.includes(input.value) || item.includes(input.value.toLowerCase())) {
                         dataContainer.innerHTML += `<div>${item}</div>`;
                     }
                 });
